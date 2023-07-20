@@ -333,6 +333,9 @@ local get_region = function(mode)
     elseif (mode == 'v') then
         first = vim.fn.getpos("'<")
         last = vim.fn.getpos("'>")
+    elseif (mode == 'V') then
+        first = vim.fn.getpos("`<")
+        last = vim.fn.getpos("`>")
     else
         return
     end
