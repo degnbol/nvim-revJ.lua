@@ -330,12 +330,9 @@ local get_region = function(mode)
     if (mode == 'char') then
         first = vim.fn.getpos("'[")
         last = vim.fn.getpos("']")
-    elseif (mode == 'v') then
+    elseif (mode == 'v' or mode == 'V') then
         first = vim.fn.getpos("'<")
         last = vim.fn.getpos("'>")
-    elseif (mode == 'V') then
-        first = vim.fn.getpos("`<")
-        last = vim.fn.getpos("`>")
     else
         return
     end
