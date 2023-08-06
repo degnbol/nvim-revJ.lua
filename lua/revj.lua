@@ -265,7 +265,7 @@ local setup_keys = function()
         },
     }
 
-    local opts = {silent=true, noremap=true}
+    local opts = {silent=true, noremap=true, desc="Split (revJ)"}
     for op_name, keys in pairs(settings.keymaps) do
         local command = commands[op_name]
         vim.api.nvim_set_keymap(
